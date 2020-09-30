@@ -51,6 +51,12 @@ const fi = (function() {
 
     },
 
+    find: function(coll, pred){
+      if (Array.isArray(coll)){
+        return coll.find(pred);
+      }
+    }
+
     functions: function() {
 
     },
