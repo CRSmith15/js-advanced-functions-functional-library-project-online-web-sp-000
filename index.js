@@ -12,7 +12,7 @@ const fi = (function() {
         return coll;
       }  else {
         for (let e in coll){
-          cb(coll[e], e, arr);
+          cb(coll[e], e, coll);
         }
         return arr;
       }
