@@ -35,7 +35,7 @@ const fi = (function() {
 
     },
 
-    reduce: function() {
+    reduce: function(coll, cb, acc = 0) {
 
     },
 
