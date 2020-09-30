@@ -36,6 +36,18 @@ const fi = (function() {
     },
 
     reduce: function(coll, cb, acc = 0) {
+      if (acc == 0){
+        acc = coll[0];
+        for (let i = 1; i < coll.length; i++){
+          acc = cb(acc, coll[i], coll);
+        }
+        return acc;
+      } else {
+        for (let i = 0; i< coll.length; i++){
+          acc = cb(acc, coll[i], coll);
+        }
+        return acc;
+      }
 
     },
 
