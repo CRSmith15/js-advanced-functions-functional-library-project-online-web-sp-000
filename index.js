@@ -7,7 +7,7 @@ const fi = (function() {
     each: function(coll, cb) {
       if (Array.isArray(coll)){
         for (let i = 0; i < coll.length; i++){
-          cb(arr[i], i, coll);
+          cb(coll[i], i, coll);
         }
         return coll;
       }  else {
