@@ -14,7 +14,7 @@ const fi = (function() {
         for (let e in coll){
           cb(coll[e], e, coll);
         }
-        return arr;
+        return coll;
       }
     },
 
