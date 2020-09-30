@@ -18,7 +18,20 @@ const fi = (function() {
       }
     },
 
-    map: function() {
+    map: function(arr, cb) {
+      if (Array.isArray(arr)){
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++){
+          newArr.push(cb(arr[i]));
+        }
+        return newArr;
+      } else {
+        let newArr = [];
+        for (let e in arr){
+          newArr.push(cb(arr[e]));
+        }
+        return newArr;
+      }
 
     },
 
